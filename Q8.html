@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style>
+  .test
+   { background-color:blueviolet;}
+
+</style>
+
+</head>
+<body>
+<p>Select book from list.</p>
+
+<select>
+  <option value="">Select books</option>
+  <option value="OOPS">OOPS
+  <option value="Java">Java
+  <option value="Html/css">Html/css
+</select>
+
+<p>You want to buy <span><p id="me"></p></span> </p>
+<script>
+$(document).ready(function() { 
+         $('select').on('change', function() {
+         $("#me").append(this.value+" <br>")
+});
+});   
+</script>
+</body>
+</html>

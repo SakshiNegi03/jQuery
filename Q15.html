@@ -1,0 +1,30 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<center>
+<div id="me"><b>Hello</b></div>
+<button type="button">Click Me!</button>
+</center>
+<script>
+    $(document).ready(function()
+{console.log("hello");
+ $("button").click(function()
+ {
+      $.ajax({url:"load.txt",async:'true',dataType:'text',type:'GET',success:function(result) {
+                setTimeout(function(){
+                    console.log(result);
+                     $('#me').append('</br>'+result);
+                },1000);
+                        
+            },error:function(){
+                console.log("error")
+            }});
+            console.log("outside ajax");
+        });
+    });
+    
+</script>
+</body>
+</html>

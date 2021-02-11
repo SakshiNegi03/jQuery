@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+
+<table style="width:80%">
+   <center><strong>Points Earned</strong><center>
+  <tr>
+    <th class="name">Name</th>
+    <th class="epoint">Points</th>
+  </tr>
+  <tr>
+    <td class="name">Sam</td>
+    <td class="epoint">17</td>
+  </tr>
+  <tr>
+    <td class="name">Rosy</td>
+    <td class="epoint">6</td>
+  </tr>
+   <tr>
+    <td class="name">Josh</td>
+    <td class="epoint">16</td>
+  </tr>
+   <tr>
+    <td class="name">Rachel</td>
+    <td class="epoint">19</td>
+  </tr>
+</table>
+<script>
+$(document).ready(function(){
+    $('.epoint').each(function(i, n) {
+   if($(n).text() > 10) 
+      $(n).css('background-color','grey');
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        </head>
+   <body>
+
+ <div id="me">Hello</div>
+       <table ><tr> <button type="button">cross button</button></tr></table>
+
+<script>
+    $(document).ready(function()
+{
+        console.log("hello");
+        $("button").click(function()
+       {
+      
+            $.ajax({url:"load.txt",async:'true',dataType:'text',type:'DELETE',success:function(result) {
+                setTimeout(function(){
+                    console.log(result);
+                     $('#me').append('</br>'+result);
+                     $('button').remove();
+
+                      $('table tr').append('</br>button removed');
+                },100);        
+            },error:function(){ 
+            }});
+            console.log("outside");    
+        });
+    });
+</script>
+</body>
+</html>

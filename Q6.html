@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style >
+		div, p, button{
+			text-align: center;
+            
+	</style>
+</head>
+<body>
+<div>
+<p> My name is Sam.</p>
+<p>I am 25 years old.</p>
+</div>
+<center>
+	<button id="button1">change div tags with p tags </button>
+</center>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#button1").click(function() {
+			/* Act on the event */
+			$("div").replaceWith($("<p>"+$("div").text()+"</p>"));
+		});
+		
+	});
+</script>
+
+
+</body>
+</html>

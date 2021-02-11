@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<center>
+<p id="me"></p>
+<button>click me </button>
+</center>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("#me").append("hey there click me to add text <br>")
+		});
+		
+	});
+</script>
+</body>
+</html>

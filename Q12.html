@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+html,body{
+    height:70%;
+    width:70%
+    }
+
+.class2 {
+    width : 50%;
+    height : 50%;
+    background :grey;
+}
+
+div ul li {
+    background :palevioletred;
+    list-style:none;
+    display: inline;
+    
+}
+
+</style>
+</head>
+<body>
+
+
+    <div class="class2">
+       <ul>
+       <li> hey</li>
+       <li> hello</li>
+       <li> hiii</li>
+       </ul>
+    </div>
+
+<script>
+$(document).ready(function()
+{
+$('.class2').on('click', function () { alert('You clicked on the class2 element.'); }).children().on('click', function (e) {
+    e.stopPropagation();  
+});
+});
+</script>
+</body>
+</html>

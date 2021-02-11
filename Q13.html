@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="checkheight">
+    
+      hi i am sam<br>
+      i love to play football<br>
+    </div>
+     <br>
+    <div class="checkheight">
+      hi i am ram<br>
+      i love to eat cookies<br>
+      my hobby is to play badminton<br>
+<script>
+
+$(document).ready(function()
+{var highest = null;
+        var hi = 0;
+       $(".checkheight").each(function()
+       {
+         var h = $(this).height();
+              if(h > hi){
+                   hi = h;
+                   highest=$(this);
+                    }         
+      });
+        alert('max height'+hi); 
+         $(highest).css("background-color","grey");   
+});
+</script>
+</body>
+</html>

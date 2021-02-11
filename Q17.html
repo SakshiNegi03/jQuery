@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div>
+<img src="https://cdn.pixabay.com/photo/2015/04/19/08/33/flower-729512__340.jpg" alt="flower" width="150" height="113">
+<img src="https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg" alt="flower" width="150" height="113">
+
+</div>
+
+<button>Start Animation</button>
+
+
+<script> 
+$(document).ready(function(){
+  $("button").click(function(){
+    $("div").animate({left: '400px'});
+  });
+}); 
+</script> 
+</body>
+</html>

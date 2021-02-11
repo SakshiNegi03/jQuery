@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<style type="text/css">
+		.target{
+			font-size: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div id="main">
+	<p class="target"> oh hey </p>
+</div>
+
+<div id="notmain">
+	<p class="target">oh hii there</p>
+</div>
+<center><button class="target">change font whose id is main </button></center>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("button").click(function() {
+				$(".target").parent("#main").css('font-size', '700%');
+			});
+			
+		});
+	</script>
+	
+
+</body>
+</html>
